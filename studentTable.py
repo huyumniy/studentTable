@@ -1,4 +1,3 @@
-import os
 import json
 import requests
 from os.path import exists
@@ -6,7 +5,6 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from aiogram import Bot, Dispatcher, executor, types
-from selenium.webdriver.firefox.service import Service
 
 
 bot = Bot(token="5385147452:AAEQHoHBmcQnsrQLy7Ikw1bDztuSAcq4T9w")
