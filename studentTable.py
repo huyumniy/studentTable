@@ -1,4 +1,3 @@
-import os
 import json
 import requests
 from os.path import exists
@@ -78,11 +77,10 @@ if exists('data.json'):
                     await bot.send_message(message.chat.id, 'Зачекайте будь ласка, обробляю фото...')
                     table = 'http://193.189.127.179:5010/time-table/student?' + v
                     option = webdriver.ChromeOptions()
-                    option.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
                     option.add_argument("--headless")
+                    option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
-                    option.add_argument('--disable-dev-sh-usage')
-                    browser = webdriver.Chrome(executable_path= os.environ.get("CHROMEDRIVER_PATH"), chrome_options=option)
+                    browser = webdriver.Chrome()
                     browser.get(table)
                     body = browser.find_element(By.ID, 'time-tablew6')
                     body.screenshot('picture.png')
