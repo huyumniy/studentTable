@@ -85,11 +85,7 @@ if exists('data.json'):
                     option.add_argument("--no-sandbox")
                     browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=option)
                     browser.get(table)
-                    body = browser.find_element(By.ID, 'time-tablew6')
-                    body.screenshot('picture.png')
-                    browser.quit()
-                    photo = open('picture.png', 'rb')
-                    await bot.send_photo(message.chat.id, photo)
+
 
 
 @dp.message_handler()
