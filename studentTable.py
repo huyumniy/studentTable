@@ -81,10 +81,11 @@ if exists('data.json'):
                     table = 'http://193.189.127.179:5010/time-table/student?' + v
                     option = webdriver.ChromeOptions()
                     option.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+                    s = Service(os.environ.get("CHROMEDRIVER_PATH"))
                     option.add_argument("--headless")
                     option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
-                    browser = webdriver.Chrome(service=Service(os.environ.get("CHROMEDRIVER_PATH")), options=option)
+                    browser = webdriver.Chrome(service=s, options=option)
                     browser.get(table)
                     body = browser.find_element(By.ID, 'time-tablew6')
                     body.screenshot('picture.png')
