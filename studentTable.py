@@ -84,7 +84,7 @@ if exists('data.json'):
                     option.add_argument("--headless")
                     option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
-                    browser = webdriver.Chrome(service=Service("CHROMEDRIVER_PATH"), options=option)
+                    browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=option)
                     browser.get(table)
                     body = browser.find_element(By.ID, 'time-tablew6')
                     body.screenshot('picture.png')
