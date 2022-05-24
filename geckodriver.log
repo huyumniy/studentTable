@@ -178,3 +178,20 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653358249098	geckodriver	INFO	Listening on 127.0.0.1:57071
+1653358252148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "57072" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\vladk\\AppData\\Local\\Temp\\rust_mozprofilekLbPNH"
+*** You are running in headless mode.
+1653358252388	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vladk\\AppData\\Local\\Temp\\rust_mozprofilekLbPNH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57072/devtools/browser/58071304-e220-49bb-8ec4-e40e0ea15c0d
+1653358253068	Marionette	INFO	Listening on port 57091
+Read port: 57091
+1653358253158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1653358255217	Marionette	INFO	Stopped listening on port 57091
+JavaScript error: resource://gre/modules/TerminatorTelemetry.jsm, line 71: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
