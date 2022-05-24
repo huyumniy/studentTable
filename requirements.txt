@@ -1,0 +1,6 @@
+beautifulsoup4==4.11.1
+aiogram==2.20
+requests==2.27.1
+selenium==4.1.5
+json
+lxml==4.8.0
