@@ -1,4 +1,4 @@
-import os
+from io import BytesIO
 import json
 import requests
 from os.path import exists
@@ -77,11 +77,11 @@ if exists('data.json'):
                 if k.lower() == message.text.split('/')[1].lower():
                     await bot.send_message(message.chat.id, 'Зачекайте будь ласка, обробляю фото...')
                     table = 'http://193.189.127.179:5010/time-table/student?' + v
-                    option = webdriver.ChromeOptions()
+                    option = webdriver.FirefoxOptions()
                     option.add_argument("--headless")
                     option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
-                    browser = webdriver.Chrome(executable_path='C:\\webdrivers\\chromedriver.exe', chrome_options=option)
+                    browser = webdriver.Firefox(executable_path='C:\\webdrivers\\geckodriver.exe', options=option)
                     browser.get(table)
                     body = browser.find_element(By.ID, 'time-tablew6')
                     body.screenshot('picture.png')
