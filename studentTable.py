@@ -83,7 +83,7 @@ if exists('data.json'):
                     option.add_argument("--headless")
                     option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
-                    browser = webdriver.Firefox(executable_path='C:\\webdrivers\\geckodriver.exe', options=option)
+                    browser = webdriver.Firefox(executable_path='geckodriver.exe', options=option)
                     browser.get(table)
                     body = browser.find_element(By.ID, 'time-tablew6')
                     body.screenshot('picture.png')
