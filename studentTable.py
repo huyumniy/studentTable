@@ -80,7 +80,7 @@ if exists('data.json'):
                     table = 'http://193.189.127.179:5010/time-table/student?' + v
                     option = webdriver.ChromeOptions()
                     option.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-
+                    option.add_argument("--disable-gpu")
                     option.add_argument("--disable-dev-shm-usage")
                     option.add_argument("--no-sandbox")
                     browser = webdriver.Chrome(os.environ.get("CHROMEDRIVER_PATH"), options=option)
