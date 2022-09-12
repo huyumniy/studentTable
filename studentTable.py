@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from aiogram import Bot, Dispatcher, executor, types
 
 
-bot = Bot(token="5385147452:AAEQHoHBmcQnsrQLy7Ikw1bDztuSAcq4T9w")
+bot = Bot(token="***")
 dp = Dispatcher(bot)
 
 
