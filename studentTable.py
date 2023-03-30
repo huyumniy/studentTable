@@ -8,13 +8,13 @@ from aiogram import Bot, Dispatcher, executor, types
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
-bot = Bot(token='5385147452:AAEQHoHBmcQnsrQLy7Ikw1bDztuSAcq4T9w')
-dp = Dispatcher(bot)    # TODO: Hide bot token.
+bot = Bot(token='TOKEN')
+dp = Dispatcher(bot)
 
 db = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    password="!5Yasya007",
+    password="PASSWORD",
     database="studentdb"
 )
 mycursor = db.cursor()
